@@ -52,19 +52,30 @@ function sortearAmigo() {
 }
 
 // Función para validar entrada de texto
-function validarNombre(name){
-    if(name == ''){
-        alert('Por favor, ingrese un nombre');
+function validarNombre(name) {
+    if (name === '') {
+        Swal.fire({
+            title: 'Error',
+            text: 'Por favor, ingrese un nombre.',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
         return false;
     }
     return true;
 }
 
 // Función para validar si existe un amigo en la lista
-function existeAmigo(name){
-    if(amigos.includes(name)){
-        alert('El amigo ya existe en la lista');
-        limpiarCaja();
+function existeAmigo(name) {
+    if (amigos.includes(name)) {
+        Swal.fire({
+            title: 'Duplicado',
+            text: 'El amigo ya existe en la lista.',
+            icon: 'info',
+            confirmButtonText: 'Aceptar'
+        }).then(() => {
+            limpiarCaja(); // Limpiar caja de texto 
+        });
         return true;
     }
     return false;
