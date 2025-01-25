@@ -160,3 +160,45 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+@media (max-width: 768px) {
+    
+    body{
+        height: 100vh;
+    }
+    
+    .main-content {
+        padding: 10px;
+    }
+    .header-banner {
+        padding: 20px 0;
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+    .input-section {
+        padding: 15px;
+        height: auto;
+    }
+    .main-title {
+        font-size: 36px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .input-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-title, .button-add {
+        border-radius: 25px;
+    }
+    .button-add {
+        width: 50%;
+        margin-top: 5%;
+    }
+
+    .button-draw {
+        padding: 10px 15px;
+    }
+}
